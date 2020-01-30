@@ -68,7 +68,7 @@
 	//(14)three nodes - the above code is drawing is a triangle... you can add more nodes to the polygon by separating each with a comma
 
 	//(15)here you could set the attributes of the popup instead of setting each to specific text
-	var popup = L.LoveLibrary();
+	var popup = L.popup();
 
 	
     var LoveLibrary = {
@@ -85,7 +85,7 @@
 };
 
 //(16) you can also comment out mapped items if you do not want them to draw. note that the var reference above is still present but below i have turned off a layer
-//	L.geoJSON(LoveLibrary,{}).addTo(mymap);
+	L.geoJSON(LoveLibrary,{}).addTo(mymap);
 
 //(17) think about how you would write some pop up text into your Love Library layer. Look at how it is done above. Read online help. Ask your neighbor. There are multiple approaches!
 
