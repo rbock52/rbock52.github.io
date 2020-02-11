@@ -38,10 +38,10 @@
 
         L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
-}).addTo(map);
+	}).addTo(map);
 
           //change the file name to yours
-            $.getJSON("https://rshepard2.github.io/cases2.geojson")  // The getJSON() method is used to get JSON data
+            $.getJSON("https://rbock52.github.io/lab4/data/convert.json")  // The getJSON() method is used to get JSON data
             .done(function(data) {
                 var info = processData(data);
                 createPropSymbols(info.timestamps, data);
