@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <title>Ryan's Lab 4 v 7</title>
+      <title>Ryan's Lab 4 v 8</title>
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
         integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -158,7 +158,7 @@ function createSliderUI(timestamps) {
 
   // Add labels to the time slider when the map first loaded
   function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'bottomleft' }); // same position as the slider
+    var temporalLegend = L.control({position: 'bottomright' }); // same position as the slider
                        // One more use of L.control !!
     temporalLegend.onAdd = function(map) {
       var output = L.DomUtil.create("output", "temporal-legend");
@@ -187,7 +187,7 @@ function createSliderUI(timestamps) {
             // calculate the radius of the proportional symbols based on area
             function calcPropRadius(attributeValue) {
 
-              var scaleFactor = 0.001;   // the scale factor is used to scale the values; the units of the radius are in meters
+              var scaleFactor = 0.01;   // the scale factor is used to scale the values; the units of the radius are in meters
                                          // you may determine the scale factor accordingly based on the range of the values and the mapping scale
               var area = attributeValue * scaleFactor;
 
