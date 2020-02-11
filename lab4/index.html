@@ -187,7 +187,7 @@ function createSliderUI(timestamps) {
             // calculate the radius of the proportional symbols based on area
             function calcPropRadius(attributeValue) {
 
-              var scaleFactor = 0.01;   // the scale factor is used to scale the values; the units of the radius are in meters
+              var scaleFactor = 1;   // the scale factor is used to scale the values; the units of the radius are in meters
                                          // you may determine the scale factor accordingly based on the range of the values and the mapping scale
               var area = attributeValue * scaleFactor;
 
