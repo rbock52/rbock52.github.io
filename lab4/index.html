@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <title>Ryan's Lab 4 v 8</title>
+      <title>Ryan's Lab 4 v 9</title>
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
         integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -177,7 +177,7 @@ function createSliderUI(timestamps) {
                   var radius = calcPropRadius(props[timestamp]); // circle radius, calculation function defined below
 
                   // pop-up information (when mouseover) for each city is also defined here
-                 var popupContent = props.name + ' ' + timestamp + ' population: ' + String(props[timestamp]);
+                 var popupContent = props.name + ' ' + timestamp + ' Number of Cases: ' + String(props[timestamp]);
 
                   layer.setRadius(radius);  // Leaflet method for setting the radius of a circle
                   layer.bindPopup(popupContent, { offset: new L.Point(0,-radius) }); // bind the popup content, with an offset
