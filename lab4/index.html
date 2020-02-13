@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
       <meta charset="utf-8">
-      <title>Ryan's Lab 4 v 11</title>
+      <title>Ryan's Lab 4 v 12</title>
 
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
         integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -123,7 +123,7 @@
             }
 
 function createSliderUI(timestamps) {
-  var sliderControl = L.control({ position: 'bottomleft'} ); // position of the slider
+  var sliderControl = L.control({ position: 'topright'} ); // position of the slider
                     // Another use of L.control :)
   sliderControl.onAdd = function(map) {
     //initialize a range slider with mousedown control
@@ -134,7 +134,7 @@ function createSliderUI(timestamps) {
 
     // Define the labels of the time slider as an array of strings
     // Modify this for your data
-    var labels = ["1950", "1960","1970","1980", "1990", "2000","2010"];
+    var labels = ["day1", "day2","day3","day4", "day5", "day6","day7","day8"];
 
     $(slider)
         .attr({
@@ -152,13 +152,13 @@ function createSliderUI(timestamps) {
     return slider;
   }
   sliderControl.addTo(map);
-  createTimeLabel("1950"); //The starting timestamp label
+  createTimeLabel("day1"); //The starting timestamp label
   }
 
 
   // Add labels to the time slider when the map first loaded
   function createTimeLabel(startTimestamp) {
-    var temporalLegend = L.control({position: 'bottomleft' }); // same position as the slider
+    var temporalLegend = L.control({position: 'topright' }); // same position as the slider
                        // One more use of L.control !!
     temporalLegend.onAdd = function(map) {
       var output = L.DomUtil.create("output", "temporal-legend");
