@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <div style="background-color: white;max-width: 80%; width:80%; margin:0 auto;">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+  
+    <meta charset="utf-8" />
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <title>Topographic Map Assessment</title>
+
+
+  </head>
+  <body>
+	<div style="text-align: center; background-color: white;max-width: 75%; width:75%; margin:0 auto;">
+		<h1>Welcome to the Topographic Map Assessment</h1>
+		<p>To begin please enter in your Unique ID below.</p>
+		<p>Your Unique ID needs to be the same as the ID you use for the other tests.</p>
+		 <form>
+			<label for="fname">Unique ID:</label>
+			<input type="text" id="fname" name="fname"><br>
+		</form> 
+		<p>Question 1: Please draw a line that will give the optimal path between the two points on the map.	Please keep in mind steepness of the environment and distance traveled.</p>
+		
+		<div style="margin:0 auto;" id="map" class="map"></div>
+		
+		<form class="form-inline">
+		  <label>Select Draw Mode &nbsp;</label>
+		  <select id="type">
+			<option value="None">None</option>
+			<option value="LineString">Draw</option>
+
+		  </select>
+		</form>
+		<script src="index.js"></script>
+		<button onclick="remove()">Clear</button>
+		<button onclick="getfeatures()">Save</button>
+		<br><br><br>	
+		<p>Question 2: Which of the following views best represents what someone would see standing at the start of the arrow and facing in that direction?</p>
+		<img src="Images/Question2.JPG" alt="Question2Image" style="width:700px;height:500px;">
+		<div class="container">
+		  <div class="image">
+			<img src="Images/Question2a.JPG" />
+			<p><button onclick="Blank">A</button></p>
+		  </div>
+		  <div class="image">
+			<img src="Images/Question2b.JPG" />
+			<p><button onclick="Blank">B</button></p>
+		  </div>
+		  <div class="image">
+			<img src="Images/Question2c.JPG" />
+			<p><button onclick="Blank">C</button></p>
+		  </div>
+		  <div class="image">
+			<img src="Images/Question2d.JPG" />
+			<p><button onclick="Blank">D</button></p>
+		  </div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+	</div>
+
+ </body>
+</html>
